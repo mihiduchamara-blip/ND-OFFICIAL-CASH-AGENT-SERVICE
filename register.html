@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | ND OFFICIAL CASH AGENT SERVICE</title>
+    <!-- SEO Best Practices -->
+    <meta name="description" content="Register your account at ND OFFICIAL CASH AGENT SERVICE, Sri Lanka's leading cash agent. Secure, fast, and trusted betting platform integration.">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Animated AI Background -->
+    <div class="background-animation"></div>
+    <div class="background-overlay"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="main-nav">
+        <a href="index.html" class="logo" id="nav-logo" style="text-decoration: none;">
+            <img src="assets/logo.jpg" alt="ND Cash Agent Logo" id="brand-logo" onerror="this.style.display='none'; document.getElementById('brand-text').style.display='block';">
+            <span id="brand-text" style="display:none;">ND CASH AGENT</span>
+        </a>
+        <div class="nav-links" id="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#contact" class="btn-primary">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- Registration Form Section -->
+    <section class="registration-section">
+        <div class="form-container">
+            <div class="form-header">
+                <i class="fa-solid fa-user-plus form-icon"></i>
+                <h1 class="glow-text">Open Your <span class="neon-green">Account</span></h1>
+                <p>Register securely to move money smarter across 1XBET, Melbet & 888 Starz.</p>
+            </div>
+
+            <!-- Pre-Form Messages -->
+            <div id="form-message" class="form-message" style="display: none;"></div>
+
+            <form id="registration-form" class="gf-form" novalidate onsubmit="return false;">
+                
+                <!-- Generating Customer ID -->
+                <input type="hidden" id="customer-id" name="customer_id" value="">
+
+                <!-- Section 1: Personal Information -->
+                <div class="form-section" id="section-personal">
+                    <h2 class="section-heading"><i class="fa-solid fa-address-card"></i> Personal Information</h2>
+                    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="fullName">Full Name <span class="required">*</span></label>
+                            <input type="text" id="fullName" name="full_name" class="form-input" required placeholder="e.g. John Doe">
+                            <div class="error-msg">Please enter your full name.</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="username">Username <span class="required">*</span></label>
+                            <input type="text" id="username" name="username" class="form-input" required placeholder="e.g. johndoe99" pattern="[a-zA-Z0-9_]{4,20}">
+                            <div class="error-msg">Username must be at least 4 characters (letters/numbers).</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 2: Contact Details -->
+                <div class="form-section" id="section-contact">
+                    <h2 class="section-heading"><i class="fa-solid fa-address-book"></i> Contact Details</h2>
+                    
+                    <div class="form-grid">
+                        <div class="form-group full-width">
+                            <label for="email">Email Address <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" class="form-input" required placeholder="example@email.com">
+                            <div class="error-msg">Please enter a valid email address.</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mobileNumber">Mobile Number <span class="required">*</span></label>
+                            <div class="input-with-icon">
+                                <i class="fa-solid fa-phone"></i>
+                                <input type="tel" id="mobileNumber" name="mobile_number" class="form-input input-icon-pad" required placeholder="07XXXXXXXX or +94XXXXXXXXX">
+                            </div>
+                            <div class="error-msg">Enter a valid Sri Lankan number.</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="whatsappNumber">WhatsApp Number <span class="optional">(Optional)</span></label>
+                            <div class="input-with-icon">
+                                <i class="fa-brands fa-whatsapp whatsapp-color"></i>
+                                <input type="tel" id="whatsappNumber" name="whatsapp_number" class="form-input input-icon-pad" placeholder="Same as mobile if empty">
+                            </div>
+                            <div class="error-msg">Enter a valid Sri Lankan number.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 3: Betting Preferences -->
+                <div class="form-section" id="section-betting">
+                    <h2 class="section-heading"><i class="fa-solid fa-gamepad"></i> Betting Preferences</h2>
+                    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="preferredPlatform">Preferred Platform</label>
+                            <div class="custom-select-wrapper">
+                                <select id="preferredPlatform" name="preferred_platform" class="form-input form-select">
+                                    <option value="1xbet">1xBet</option>
+                                    <option value="melbet">Melbet</option>
+                                    <option value="both">Both Platforms</option>
+                                </select>
+                                <i class="fa-solid fa-chevron-down select-icon"></i>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="experienceLevel">Experience Level</label>
+                            <div class="custom-select-wrapper">
+                                <select id="experienceLevel" name="experience_level" class="form-input form-select">
+                                    <option value="beginner">Beginner</option>
+                                    <option value="intermediate">Intermediate</option>
+                                    <option value="expert">Expert</option>
+                                </select>
+                                <i class="fa-solid fa-chevron-down select-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 4: Agreement -->
+                <div class="form-section" id="section-agreement">
+                    <h2 class="section-heading"><i class="fa-solid fa-file-signature"></i> Verification & Agreement</h2>
+                    
+                    <!-- Advanced feature: OTP placeholder -->
+                    <div class="otp-verification-container">
+                        <p class="otp-note"><i class="fa-solid fa-shield-halved"></i> Account will require admin approval after submission.</p>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label class="custom-checkbox">
+                            <input type="checkbox" id="ageConfirm" name="age_confirm" required>
+                            <span class="checkmark"></span>
+                            <span class="checkbox-text">I confirm that I am above 18 years old <span class="required">*</span></span>
+                        </label>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label class="custom-checkbox">
+                            <input type="checkbox" id="termsConfirm" name="terms_confirm" required>
+                            <span class="checkmark"></span>
+                            <span class="checkbox-text">I agree to the <a href="#" class="gold-link">Terms & Conditions</a> <span class="required">*</span></span>
+                        </label>
+                    </div>
+
+                    <!-- Gravity Forms Style Google reCAPTCHA Integration -->
+                    <div class="recaptcha-container">
+                        <!-- Normally this is inserted by GF or standard reCaptcha Script -->
+                        <div class="g-recaptcha-mock" id="recaptchaMock">
+                            <label class="custom-checkbox recaptcha-checkbox">
+                                <input type="checkbox" id="recaptchaVerify" required>
+                                <span class="checkmark square-mark"></span>
+                                <span class="checkbox-text recaptcha-text">I'm not a robot</span>
+                            </label>
+                            <div class="recaptcha-logo">
+                                <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" alt="reCAPTCHA">
+                            </div>
+                        </div>
+                        <div class="error-msg" id="captcha-error">Please complete the captcha.</div>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" id="btn-submit-registration" class="btn-primary submit-btn">
+                        <span>Register Now</span> <i class="fa-solid fa-arrow-right icon-right"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Success Modal Overlay -->
+    <div id="success-overlay" class="modal-overlay" style="display: none;">
+        <div class="success-modal">
+            <div class="success-icon">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h2 class="neon-green">Registration Successful!</h2>
+            <p>Welcome to ND Official Cash Agent Service. Your Customer ID is <strong id="display-custom-id" class="neon-green">ND-XXXX</strong>.</p>
+            <p>An admin will review your application and send the confirmation email shortly.</p>
+            <a href="index.html" class="btn-primary mt-4">Return Home</a>
+        </div>
+    </div>
+
+    <!-- Contact & Footer -->
+    <footer id="contact" class="footer">
+        <div class="contact-cta">
+            <h2 id="footer-title">Need Help Registering?</h2>
+            <p id="footer-subtitle">Contact our 24/7 customer support via WhatsApp.</p>
+            <a href="https://wa.me/94789250315" class="whatsapp-btn" target="_blank" id="btn-whatsapp">
+                <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 ND Official Cash Agent Service. All Rights Reserved. Best Cash Agent in Sri Lanka.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="register.js"></script>
+</body>
+</html>
